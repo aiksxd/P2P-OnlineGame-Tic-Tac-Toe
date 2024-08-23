@@ -621,6 +621,7 @@ function liveCoverInput(){
             reader.readAsDataURL(file);
             reader.onloadend = () => {
                 liveCoverBase64 = reader.result;
+                document.getElementById("LiveCover").src = liveCoverBase64;
             }
         } else {
             alert("it can't over 1MB");
